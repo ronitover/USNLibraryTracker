@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <title>{% block title %}Library Management System{% endblock %}</title>
+    <link rel="stylesheet" href="{% block stylesheet %}{% endblock %}">
+</head>
+<body>
+    <div class="topbar">
+        <img src="{{ url_for('static', filename='images/nsamfgcn-logo.png') }}" alt="logo" class="logo">
+        <button class="admin-login" onclick=" ">Login As Administrator</button>
+        {% block logout_button %}{% endblock %}
+    </div>
+    <div class="backgroundcontainer">
+        <div class="overlay"></div>
+        <div class="box-container">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
