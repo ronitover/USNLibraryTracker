@@ -2,10 +2,9 @@
 
 {% block title %}Student Login{% endblock %}
 
-{% block stylesheet %}{{ url_for('static', filename='css/login.css') }}{% endblock %}
+{% block stylesheet %}{{ url_for('static', filename='css/login_s.css') }}{% endblock %}
 
 {% block logout_button %}
-    <!-- Assuming you want a logout button here, modify if necessary -->
     <button class="logout-button" onclick="redirectToStudentLogoutPage()">LOGOUT</button>
 {% endblock %}
 
@@ -13,7 +12,11 @@
     <div class="radio-button">
         <label><input type="radio" name="role" value="faculty" onclick="redirectToFacultyPage()"> Faculty</label>
         <label><input type="radio" name="role" value="student" checked> Student</label>
-    </div>
-    <input type="text" class="input-box" placeholder="Enter USN" required>
-    <button class="login-button" onclick="redirectToStudentPage()">LOGIN</button>
+    </div>   
+    <input type="text" id="usnInput" class="input-box" placeholder="Enter USN" required>
+    <button id="login-button" class="login-button">LOGIN</button>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}

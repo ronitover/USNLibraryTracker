@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Faculty Login{% endblock %}
+
+{% block stylesheet %}{{ url_for('static', filename='css/login_f.css') }}{% endblock %}
+
+{% block logout_button %}
+    <button class="logout-button" onclick="redirectToFacultyLogoutPage()">LOGOUT</button>
+{% endblock %}
+
+{% block content %}
+    <!-- <div class="radio-button">
+        <label><input type="radio" name="role" value="faculty" checked> Faculty</label>
+        <label><input type="radio" name="role" value="student" onclick="redirectToStudentPage()"> Student</label>
+    </div> -->
+    <input type="text" class="input-box" placeholder="Enter Faculty ID" required>
+    <input type="password" class="pwd" placeholder="Password" required>
+    <button class="login-button" onclick="redirectToFacultyPage()">LOGIN</button>
+{% endblock %}
