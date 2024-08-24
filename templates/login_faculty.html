@@ -5,6 +5,7 @@
 {% block stylesheet %}{{ url_for('static', filename='css/login_f.css') }}{% endblock %}
 
 {% block logout_button %}
+    <button class="admin-login" onclick="redirectToAdminPage()">Login As Administrator</button>
     <button class="logout-button" onclick="redirectToFacultyLogoutPage()">LOGOUT</button>
 {% endblock %}
 
