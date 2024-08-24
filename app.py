@@ -57,5 +57,9 @@ def student_login():
 def login_faculty():
     return render_template('login_faculty.html')
 
+@app.route('/login/admin')
+def login_admin():
+    return render_template('login_admin.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
