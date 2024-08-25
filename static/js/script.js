@@ -9,8 +9,8 @@ function redirectToStudentPage() {
 }
 
 function redirectToAdminPage() {
+    console.log('Redirecting to Admin Page');
     window.location.href='/login/admin';
-    document.getElementById('login-button').innerText = 'Login As Student';
 }
 
 
