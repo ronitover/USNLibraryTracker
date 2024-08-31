@@ -8,6 +8,10 @@ function redirectToStudentPage() {
     window.location.href = '/';
 }
 
+function redirectToAdminPage() {
+    console.log('Redirecting to Admin Page'); // For debugging
+    window.location.href='/login/admin';
+}
 
 
 document.getElementById('login-button').addEventListener('click', function(event) {

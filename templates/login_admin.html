@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Administrator Login{% endblock %}
+
+{% block stylesheet %}{{ url_for('static', filename='css/login_f.css') }}{% endblock %}
+
+{% block logout_button %}
+    <!-- Assuming you want a logout button here, modify if necessary -->
+{% endblock %}
+
+{% block content %}
+    <input type="text" class="input-box" placeholder="Enter Admin ID" required>
+    <input type="password" class="pwd" placeholder="Password" required>
+    <button class="login-button" onclick="redirectToStudentPage()">LOGIN</button>
+{% endblock %}
